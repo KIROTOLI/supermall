@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <keep-alive exclude="detail">
+      <router-view></router-view>
+    </keep-alive>
    <main-tab-bar></main-tab-bar>
+
   </div>
 </template>
 
@@ -19,5 +22,8 @@ export default {
 </script>
 
 <style>
+#app{
+  height: 1000px;
+}
 @import 'assets/css/base.css'
 </style>
